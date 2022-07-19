@@ -1,0 +1,15 @@
+<div class="card" style="width: 18rem; height: 40rem; margin-bottom: 30px;">
+  <img class="card-img-top" height="300" src="{{ food.img }}}" alt="{{food.food}}">
+  <div class="card-body" style="height: 15rem;">
+    <h5 class="card-title">{{ food.food }}</h5>
+    <p align="justify" class="card-text">{{ food.details }}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ food.portions + (food.portions == 1 ? " porção" : " porções")}}</li>
+    <li class="list-group-item">{{ food.price  | currency: "BRL"}}</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Comprar</a>
+    <a href="#" class="card-link">Adicionar ao carrinho</a>
+  </div>
+</div>
